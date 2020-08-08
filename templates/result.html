@@ -5,11 +5,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-
 	<header>
 		<div class="container">
-		<div id="brandname">
-			ML App
 		</div>
 		<h2>Voomerang Phishing Detector</h2>
 		
@@ -21,7 +18,7 @@
 
 		{% if prediction == 1%}
 
-		<h2 style="color:red;">Potential Phishing email, open email in Voomerang app to further investigate</h2>
+		<h2 style="color:red;">Phishing detected. Url or Email content suspected to be malicious. Do not open any attachments, or click any links from this sender.</h2>
 
 		</div>
 
@@ -31,7 +28,7 @@
 
 		<form action="{{ url_for('addinfo')}}" method="POST">
 
-		<input type="submit" class="btn-info" value="reademail">
+		<input type="submit" class="btn-info" value="Home">
 
 	</form>
 

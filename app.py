@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request
-import pandas as pd
 import pickle
+import pandas as pd
 import csv
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -60,8 +60,6 @@ def predict():
     elif my_predictionzz == 0:
         print("ham")
 
-   
-
     if request.method == 'POST':
         message = request.form['message']
         data = [message]
@@ -72,4 +70,6 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+	# Set host to 0.0.0.0 ("the internet" for connectivity through VMware NAT to the host machine's browser. 
+	#Debug =True for output to the console
+    app.run(host="0.0.0.0", debug=True)

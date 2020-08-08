@@ -1,12 +1,14 @@
 import imaplib as dmail
 import email as mlz
 from bs4 import BeautifulSoup as bsoup
+#Getpass for hiding the password prompt in the commandline
+from getpass import getpass
 
 
 class Snail:
     #usname = input('enter email name:')
-    usname = 'voomerzboomerzboom@gmail.com'
-    sesame = input('enter pass:')
+    usname = input('Please enter your full email address: ')
+    sesame = getpass()
     #sesame = ''
     im_url = "imap.gmail.com"
     prvdr = dmail.IMAP4_SSL(im_url)
@@ -18,7 +20,7 @@ class Snail:
             print("successfully connected to: {}".format(Snail.usname))
 
         except:
-            print("was unable to connect check settings/password")
+            print("Login Failed, Please check your credentials.")
 
     def read_em(self):
         readerz = Snail.prvdr
@@ -30,11 +32,11 @@ class Snail:
         for index, itemz in enumerate(box_itemlist):
             result2, email_data= readerz.uid('fetch', itemz, '(RFC822)')
             raw_email = email_data[0][1].decode("utf-8")
-            email_messsage = mlz.message_from_string(raw_email)
-            to_ = email_messsage['To']
-            from_ = email_messsage['From']
-            subz_ = email_messsage['Subject']
-            bods_ = email_messsage['Body']
+            email_message = mlz.message_from_string(raw_email)
+            to_ = email_message['To']
+            from_ = email_message['From']
+            subz_ = email_message['Subject']
+            bods_ = email_message['Body']
             print(index+1)
             print("email was sent from... {}".format(from_))
             #print('{}\n {}\n {}\n {}'.format(to_, from_, subz_, bods_))

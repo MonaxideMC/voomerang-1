@@ -1,24 +1,54 @@
-#Voomerang.
+---                                                                             
+layout: post
+title:  Project: Voomerang 
+date: 2020-04-01T22:55:48
+author: cerberus
+summary: >
+Project is aimed at detecting phishing emails  
+categories: Projects 
+thumbnail: 
+tags:
+ -  - 
 
-Introduction:
+---
 
-Voomerang runs in the terminal with a website companion to search and detect phishing in email contents.
-Voomerang utilizes a Flask server to run locally. To start voomerang, run "python3 app.py"
-To start, you need to enter your email address and password when prompted. 
-In the interest of security, the password field will be blank utilizing "getpass".
 
-Voomerang utilizes Naive Bayes for machine learning.
-Building models off data and comparing the dataset to other datum, it can tell you if a message is spam or not, with pretty good accuracy.
+# Overview
+  Project Voomerang is aimed at stopping phishing emails by using machine learning. A [Naive Bayes classifier](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html) will be used to read the email content and predict if the email is phishing or not based on the data you feed it.
+  
+# Requirements
+>  VMware or Virtual Box
 
-Requirements:
+>  8 GB RAM
 
-VMware or Virtual Box running either: Ubuntu or your choice of Operating System.
+>  30 GB HDD/SSD (min.)
 
-8 GB Ram
+>  Python 3.7.x
 
-30GB free hard drive space.
+### steps
+ If downloading from source do a gitclone and use pip3 to install requirements by running command listed below
 
-Python 3.7.x
+```
+# pip3
+run pip3 install -r requirements.txt
+# if pip3 not installed
+apt-update
+apt-get install python3-pip
+```
+[Voomerang gitclone](https://www.youtube.com/watch?v=Tf1Zdledf8c)
 
-Sources:
+
+## Demo 
+[Voomerang demo](https://www.youtube.com/watch?v=HrRXbCytF5E)
+
+
+## References
+  
+[Multinomial Naive Bayes Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
+
+[Naive Bayes Classifier](https://www.geeksforgeeks.org/naive-bayes-classifiers/)
+
+[Reading emails with Python](https://docs.python.org/3/library/email.examples.html)
+
+[Spam filtering with Naive Bayes](https://towardsdatascience.com/spam-filtering-using-naive-bayes-98a341224038)
 

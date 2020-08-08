@@ -2,7 +2,7 @@
 layout: post
 title:  Project: Voomerang 
 date: 2020-04-01T22:55:48
-author: cerberus
+author: cerberus , debugged by MonaxideMC
 summary: >
 Project is aimed at detecting phishing emails  
 categories: Projects 
@@ -18,11 +18,8 @@ tags:
   
 # Requirements
 >  VMware or Virtual Box
-
->  8 GB RAM
-
+>  8 GB RAM Recommended (depends on host system)
 >  30 GB HDD/SSD (min.)
-
 >  Python 3.7.x
 
 ### steps
@@ -35,11 +32,7 @@ run pip3 install -r requirements.txt
 apt-update
 apt-get install python3-pip
 ```
-[Voomerang gitclone](https://www.youtube.com/watch?v=Tf1Zdledf8c)
-
-If using the OVA file
-
-(work in progress..)
+[Voomerang gitclone](https://www.youtube.com/watch?v=Tf1Zdledf8)
 
 
 ## Demo 

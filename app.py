@@ -44,7 +44,7 @@ def predict():
     clf.fit(X_train, y_train)
     print(clf.score(X_test, y_test))
     print(clf.score(X_train,y_train))
-    sss = input("input a string to check if it is a phishing email: ")
+    sss = ("input a string to check if it is a phishing email: ")
     sss = [sss]
     vects = cv.transform(sss).toarray()
     my_predictionzz = clf.predict(vects)
@@ -72,4 +72,4 @@ def predict():
 if __name__ == '__main__':
 	# Set host to 0.0.0.0 ("the internet" for connectivity through VMware NAT to the host machine's browser. 
 	#Debug =True for output to the console
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", debug=False)

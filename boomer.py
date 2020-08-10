@@ -1,5 +1,7 @@
-import imaplib as dmail
+import imaplib
 import email as mlz
+import os
+import mailbox
 from bs4 import BeautifulSoup as bsoup
 #Getpass for hiding the password prompt in the commandline
 from getpass import getpass
@@ -11,7 +13,7 @@ class Snail:
     sesame = getpass()
     #sesame = ''
     im_url = "imap.gmail.com"
-    prvdr = dmail.IMAP4_SSL(im_url)
+    prvdr = imaplib.IMAP4_SSL(im_url)
 
     def conx(self):
         try:
